@@ -33,27 +33,32 @@ export default function ContactPage() {
         <section className="mx-auto max-w-wrap px-6 py-20">
           <div className="grid gap-10 md:grid-cols-5">
             <Reveal className="md:col-span-3">
-              <form className="rounded-2xl border border-white/10 bg-charcoal p-8">
+              <form
+                action="https://formspree.io/f/mzzjvbko"
+                method="POST"
+                className="rounded-2xl border border-white/10 bg-charcoal p-8"
+              >
+                <input type="hidden" name="_subject" value="New inspection request — STL Commercial Roofing" />
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div className="sm:col-span-1">
                     <label className="mb-1.5 block text-sm text-bone/70">Name</label>
-                    <input type="text" className="w-full rounded-lg border border-white/10 bg-ink px-4 py-3 text-bone outline-none focus:border-ember" placeholder="Jane Doe" />
+                    <input type="text" name="name" required className="w-full rounded-lg border border-white/10 bg-ink px-4 py-3 text-bone outline-none focus:border-ember" placeholder="Jane Doe" />
                   </div>
                   <div className="sm:col-span-1">
                     <label className="mb-1.5 block text-sm text-bone/70">Company</label>
-                    <input type="text" className="w-full rounded-lg border border-white/10 bg-ink px-4 py-3 text-bone outline-none focus:border-ember" placeholder="Company / Property" />
+                    <input type="text" name="company" className="w-full rounded-lg border border-white/10 bg-ink px-4 py-3 text-bone outline-none focus:border-ember" placeholder="Company / Property" />
                   </div>
                   <div className="sm:col-span-1">
                     <label className="mb-1.5 block text-sm text-bone/70">Email</label>
-                    <input type="email" className="w-full rounded-lg border border-white/10 bg-ink px-4 py-3 text-bone outline-none focus:border-ember" placeholder="you@company.com" />
+                    <input type="email" name="email" required className="w-full rounded-lg border border-white/10 bg-ink px-4 py-3 text-bone outline-none focus:border-ember" placeholder="you@company.com" />
                   </div>
                   <div className="sm:col-span-1">
                     <label className="mb-1.5 block text-sm text-bone/70">Phone</label>
-                    <input type="tel" className="w-full rounded-lg border border-white/10 bg-ink px-4 py-3 text-bone outline-none focus:border-ember" placeholder="(555) 555-5555" />
+                    <input type="tel" name="phone" className="w-full rounded-lg border border-white/10 bg-ink px-4 py-3 text-bone outline-none focus:border-ember" placeholder="(555) 555-5555" />
                   </div>
                   <div className="sm:col-span-2">
                     <label className="mb-1.5 block text-sm text-bone/70">How can we help?</label>
-                    <textarea rows={5} className="w-full rounded-lg border border-white/10 bg-ink px-4 py-3 text-bone outline-none focus:border-ember" placeholder="Tell us about your roof, building size, and what is going on." />
+                    <textarea rows={5} name="message" className="w-full rounded-lg border border-white/10 bg-ink px-4 py-3 text-bone outline-none focus:border-ember" placeholder="Tell us about your roof, building size, and what is going on." />
                   </div>
                 </div>
                 <button type="submit" className="mt-6 w-full rounded-full bg-ember px-8 py-3.5 font-semibold text-ink transition hover:bg-emberdark sm:w-auto">
